@@ -83,7 +83,7 @@ function Menu() {
           </nav>
         </div>
         <div className="ml-auto">
-          <Link to="/mongowork/public/index.html" className="btn">Book Appointment</Link>
+          <Link to="/book" className="btn">Book Appointment</Link>
         </div>
       </div>
     </>
