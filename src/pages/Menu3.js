@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './Menu.css';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import "./Menu.css";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Menu() {
   const [showProfileInfo, setShowProfileInfo] = useState(false);
@@ -13,9 +13,9 @@ function Menu() {
 
   const handleSignOut = () => {
     // Add your sign-out logic here
-    console.log('Signing out...');
+    console.log("Signing out...");
   };
-  
+
   return (
     <>
       <div className="top-bar">
@@ -23,7 +23,7 @@ function Menu() {
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-12">
               <div className="logo">
-                <Link to='/'>ABC</Link>
+                <Link to="/">ABC</Link>
                 <a href="index.html">
                   <h1>ABC</h1>
                 </a>
@@ -73,34 +73,60 @@ function Menu() {
       <div className="nav-bar">
         <div className="container-fluid">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-            <a href="#" className="navbar-brand">MENU</a>
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <a href="#" className="navbar-brand">
+              MENU
+            </a>
+            <button
+              type="button"
+              className="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div
+              className="collapse navbar-collapse justify-content-between"
+              id="navbarCollapse"
+            >
               <div className="navbar-nav mr-auto">
-                <Link to="/" className="nav-item nav-link active">Home</Link>
-                <Link to="/about" className="nav-item nav-link">About</Link>
-                <Link to="/DoctorProfile" className="nav-item nav-link">Profile</Link>
-                <Link to="/portfolio" className="nav-item nav-link">My patients</Link>
-                <Link to="/PatientHistory" className="nav-item nav-link">Patient History</Link>
+                <Link to="/" className="nav-item nav-link active">
+                  Home
+                </Link>
+                <Link to="/about" className="nav-item nav-link">
+                  About
+                </Link>
+                <Link to="/DoctorProfile" className="nav-item nav-link">
+                  Profile
+                </Link>
+                <Link to="/mypatient" className="nav-item nav-link">
+                  My patients
+                </Link>
+                <Link to="/PatientHistory" className="nav-item nav-link">
+                  Patient History
+                </Link>
               </div>
             </div>
-            <Link to="/contact" className="nav-item nav-link">Contact</Link>
+            <Link to="/contact" className="nav-item nav-link">
+              Contact
+            </Link>
             <div className="profile-icon" onClick={toggleProfileInfo}>
-            <div className="profile-icon-circle"></div>
-        <FontAwesomeIcon icon={faUser} />
-        {showProfileInfo && (
-          <div className="profile-info">
-            <Link to="/DoctorProfile">Your Profile</Link>
-            <button id="sout" onClick={handleSignOut}>Sign Out</button>
-          </div>
-        )}
-      </div>
+              <div className="profile-icon-circle"></div>
+              <FontAwesomeIcon icon={faUser} />
+              {showProfileInfo && (
+                <div className="profile-info">
+                  <Link to="/DoctorProfile">Your Profile</Link>
+                  <Link to="/">
+                    {" "}
+                    <button id="sout" onClick={handleSignOut}>
+                      Sign Out
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </nav>
         </div>
-        
       </div>
     </>
   );

@@ -12,6 +12,8 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Main from "./pages/main";
 import DoctorIndex from "./pages/Doctorindex";
+import MyPatient from "./pages/mypatient";
+import AppointmentDetails from './pages/AppointmentDetails';
 
 function App() {
   return (
@@ -25,8 +27,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/enquiry" element={<Enquiry />} />
+          <Route path='/mypatient' element={<MyPatient />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/appointment-details/:id" element={<AppointmentDetails />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/book" element={<BookAppointment />} />
