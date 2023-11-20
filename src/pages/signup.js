@@ -35,7 +35,7 @@ function Signup() {
         if (userType === "patient") {
           history("/home", { state: { id: email } });
         } else if (userType === "doctor") {
-          history("/home", { state: { id: email } });
+          history("/homedoc", { state: { id: email } });
         }
       }
     } catch (error) {

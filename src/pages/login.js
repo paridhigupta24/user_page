@@ -24,7 +24,7 @@ function Login() {
         if (userType === "patient") {
           history("/home", { state: { id: email } });
         } else if (userType === "doctor") {
-          history("/home", { state: { id: email } });
+          history("/homedoc", { state: { id: email } });
         }
       } else if (response.data === "notexist") {
         alert("User has not signed up");
