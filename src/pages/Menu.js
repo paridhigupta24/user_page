@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import './Menu.css';
+
 
 function Menu() {
+  
+  const [showProfileInfo, setShowProfileInfo] = useState(false);
+
+  const toggleProfileInfo = () => {
+    setShowProfileInfo(!showProfileInfo);
+  };
+
+  const handleSignOut = () => {
+    // Add your sign-out logic here
+    console.log('Signing out...');
+  };
   return (
     <>
       <div className="top-bar">
@@ -12,6 +27,7 @@ function Menu() {
                 <Link to='/'>ABC</Link>
                 <a href="index.html">
                   <h1>ABC</h1>
+                  
                 </a>
               </div>
             </div>
@@ -68,18 +84,24 @@ function Menu() {
               <div className="navbar-nav mr-auto">
                 <Link to="/" className="nav-item nav-link active">Home</Link>
                 <Link to="/about" className="nav-item nav-link">About</Link>
+                <Link to="/enquiry" className="nav-item nav-link">Enquiry</Link>
                 <Link to="/service" className="nav-item nav-link">Billings</Link>
                 <Link to="/portfolio" className="nav-item nav-link">My health</Link>
-                <div className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                  <div className="dropdown-menu">
-                    <Link to="/blog" className="dropdown-item">Blog Page</Link>
-                    <Link to="/single" className="dropdown-item">Single Page</Link>
-                  </div>
-                </div>
+                <Link to="/profile" className="nav-item nav-link">Profile</Link>
+                <Link to="/Doctors" className="nav-item nav-link">Doctors</Link>
               </div>
             </div>
             <Link to="/contact" className="nav-item nav-link">Contact</Link>
+            <div className="profile-icon" onClick={toggleProfileInfo}>
+            <div className="profile-icon-circle"></div>
+        <FontAwesomeIcon icon={faUser} />
+        {showProfileInfo && (
+          <div className="profile-info">
+            <Link to="/profile">Your Profile</Link>
+            <button id="sout" onClick={handleSignOut}>Sign Out</button>
+          </div>
+        )}
+        </div>
           </nav>
         </div>
         <div className="ml-auto">

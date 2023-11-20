@@ -1,0 +1,61 @@
+/* Add this CSS to your existing styles or create a new CSS file */
+
+/* Service Section */
+.service {
+    padding: 60px 0;
+  }
+  
+  .contact-form {
+    margin-top: 30px;
+  }
+
+ 
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Bill Details */
+  .bill-details {
+    background-color: #dad4d4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .bill-details h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .bill-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .bill-details button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+  }
+  

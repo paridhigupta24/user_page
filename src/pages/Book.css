@@ -1,76 +1,77 @@
+/* Book.css */
 .Main {
-    position: relative;
-    margin-left: 200px;
-    size: 200px;
-    width: 60%;
-    padding: 45px 0;
-    text-align: center; /* Center align the form content */
-    background-color: #030f27; /* Set the background color to blue */
-    color: white; /* Set text color to white */
-}
-.Main .control-group {
-    margin: 30px 0; /* Add space between form elements */
-    
-}
-
-.Main .name {
-    background: transparent; /* Make input fields transparent */
-    color: white; /* Set text color to white */
-    border: 1px solid white; /* Add a white border to input fields */
-    border-radius: 0;
-    font-size: 1rem; 
+    max-width: 700px;
+    margin: auto;
     padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.Main .Email {
-    background: transparent; /* Make input fields transparent */
-    color: white; /* Set text color to white */
-    border: 1px solid white; /* Add a white border to input fields */
-    border-radius: 0;
-    font-size: 1rem; 
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.Main .health {
-    background: transparent; /* Make input fields transparent */
-    color: white; /* Set text color to white */
-    border: 1px solid white; /* Add a white border to input fields */
-    border-radius: 0;
-    font-size: 1rem; 
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.Main .name::placeholder {
-    color: white; /* Set placeholder text color to white */
-    font-size: 1rem;
-}
-
-.Main .Email::placeholder {
-    color: white; /* Set placeholder text color to white */
-    font-size: 1rem;
-}
-.Main .health::placeholder {
-    color: white; /* Set placeholder text color to white */
-    font-size: 1rem;
-}
-
-.Main .btn {
-    padding: 16px 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .control-group {
+    margin-bottom: 15px;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 8px;
     font-size: 16px;
-    font-weight: 600;
-    color: #607D8B;
-    background: red;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    background-color: #001f3f; /* Dark blue color */
+    color: white;
+    cursor: pointer;
     border: none;
-    border-radius: 0;
-    transition: .3s;
-    
-}
-
-.Main .btn:hover {
-    background: #030f27; /* Change button background color on hover */
-    color: white; /* Change button text color on hover */
-}
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 50%; /* Set button width */
+    margin: auto; /* Center the button */
+    display: block;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  .modal-content {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }

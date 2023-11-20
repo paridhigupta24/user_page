@@ -1,0 +1,29 @@
+/* Portfolio.css */
+
+  
+  .prescription-section {
+    margin-top: 20px;
+  }
+  
+  .prescription-box {
+    border: 1px solid #c38282;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: beige;
+  }
+  
+  .prescription-label {
+    font-weight: bold;
+  }
+  
+  .prescription-text {
+    margin-top: 10px;
+  }
+  
+  .load-more {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  

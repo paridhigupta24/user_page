@@ -473,7 +473,7 @@ a:focus {
 
 .section-header p {
     color: #030f27;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -556,7 +556,7 @@ a:focus {
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #fdbe3rgb3;
+    color: black;
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -1940,7 +1940,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    margin-left: 407px;
+    margin-left: 25%;
     background: #607D8B;
 }
 
@@ -1973,7 +1973,7 @@ a:focus {
 }
 
 .contact .contact-text h2 {
-    color: 
+    color: black;
     font-size: 20px;
     font-weight: 600;
 }

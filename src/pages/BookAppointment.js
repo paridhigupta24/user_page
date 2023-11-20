@@ -1,6 +1,8 @@
+// BookAppointment.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Book.css';
+import Menu from './Menu'; 
 
 function BookAppointment() {
   const [formData, setFormData] = useState({
@@ -8,9 +10,12 @@ function BookAppointment() {
     email: '',
     phone: '',
     appointmentTime: '',
+    specialization: 'General',
     doctor: 'Mr Khan', // Default doctor value, you can change it based on your requirement
     message: '',
   });
+
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,17 +30,38 @@ function BookAppointment() {
     try {
       const response = await axios.post('http://localhost:3002/feedback', formData);
       console.log('Response:', response.data);
+
+      // Show custom popup
+      setShowModal(true);
+
+      // Reset form data
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        appointmentTime: '',
+        specialization: 'General',
+        doctor: 'Mr Khan',
+        message: '',
+      });
     } catch (error) {
       console.error('Error submitting feedback:', error.message);
     }
   };
 
+  const closeModal = () => {
+    // Close the modal
+    console.log("Closing modal");
+    setShowModal(false);
+  };
   return (
-    <div>
+    <div className='wrapper'>
+      <Menu />
       <h1>Book an appointment</h1>
 
       <form method="POST" className="Main" onSubmit={handleSubmit}>
         <div className="control-group">
+        <label className="label">Name:</label>
           <input
             type="text"
             placeholder="Your Name"
@@ -48,6 +74,7 @@ function BookAppointment() {
         </div>
         <br />
         <div className="control-group">
+        <label className="label">Email:</label>
           <input
             type="text"
             className="Email"
@@ -60,8 +87,9 @@ function BookAppointment() {
         </div>
         <br />
         <div className="control-group">
+        <label className="label">Phone:</label>
           <input
-            type="text"
+            type="number"
             className="Phone"
             placeholder="Your Phone"
             name="phone"
@@ -72,6 +100,7 @@ function BookAppointment() {
         </div>
         <br />
         <div className="control-group">
+        <label className="label">Appointment Time:</label>
           <input
             type="text"
             className="AppointmentTime"
@@ -84,6 +113,22 @@ function BookAppointment() {
         </div>
         <br />
         <div className="control-group">
+        <label className="label">Specialization:</label>
+        <select
+            className="Specialization"
+            name="specialization"
+            value={formData.specialization}
+            onChange={handleChange}
+            required
+          >
+            <option value="General">General</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Dermatology">Dermatology</option>
+            {/* Add more specialization options as needed */}
+          </select>
+          </div>
+          <div className="input-group">
+          <label className="label">Doctor:</label>
           <select
             className="Doctor"
             name="doctor"
@@ -99,8 +144,8 @@ function BookAppointment() {
         </div>
         <br />
         <div className="control-group">
-          <label>
-            Your Health Issue:<br />
+        <label className="label">Your Health Issue:</label>
+            
             <textarea
               name="message"
               className="health"
@@ -108,7 +153,7 @@ function BookAppointment() {
               onChange={handleChange}
               required
             />
-          </label>
+          
         </div>
 
         <br />
@@ -118,8 +163,19 @@ function BookAppointment() {
           </button>
         </div>
       </form>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <p>Successfully booked!</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default BookAppointment;
+
