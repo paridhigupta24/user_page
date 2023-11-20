@@ -8,8 +8,10 @@ import Portfolio from "./pages/portfolio";
 import BookAppointment from "./pages/BookAppointment";
 import Profile from "./pages/profile";
 import Doctors from "./pages/Doctors";
+import DoctorProfile from "./pages/DoctorProfile";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import PatientHistory from "./pages/PatientHistory";
 import Main from "./pages/main";
 import DoctorIndex from "./pages/Doctorindex";
 import MyPatient from "./pages/mypatient";
@@ -26,7 +28,9 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/doctorprofile" element={<DoctorProfile />} />
           <Route path="/enquiry" element={<Enquiry />} />
+          <Route path="/patienthistory" element={<PatientHistory />} />
           <Route path='/mypatient' element={<MyPatient />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />

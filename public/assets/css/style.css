@@ -1879,8 +1879,6 @@ a:focus {
 .portfolio .portfolio-text {
     display: flex;
     align-items: center;
-    height: 60px;
-    background: #030f27;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

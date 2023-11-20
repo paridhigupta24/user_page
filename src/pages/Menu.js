@@ -48,7 +48,7 @@ function Menu() {
                     </div>
                     <div class="top-bar-text">
                       <h3>Call Us</h3>
-                      <p>8439xyz</p>
+                      <p>98765-43210</p>
                     </div>
                   </div>
                 </div>

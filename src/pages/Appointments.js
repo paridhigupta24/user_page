@@ -13,7 +13,7 @@ const Appointments = ({ appointments }) => {
             <br />
             <strong>Email:</strong> {appointments.email}
             <strong>Phone:</strong> {appointments.phone}
-            <strong>Time:</strong> {appointments.time}
+            <strong>Time:</strong> {appointments.appointmentTime}
           </div>
           <Link to={`/appointment-details/${appointments._id}`}>
             <button className="appointment-button">View Details</button>

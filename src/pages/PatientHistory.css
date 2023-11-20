@@ -1,0 +1,37 @@
+/* PatientHistory.css */
+
+.patient-history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  
+  .patient-card {
+    background-color: antiquewhite;
+    width: 500px;
+    margin: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .patient-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .patient-card.expanded {
+    width: 100%;
+  }
+  
+  .patient-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .patient-details {
+    margin-top: 10px;
+  }
+  

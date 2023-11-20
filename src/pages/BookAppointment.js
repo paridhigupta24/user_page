@@ -24,6 +24,11 @@ function BookAppointment() {
     });
   };
 
+  const handleBooking = () => {
+    // Display a Windows alert
+    alert('Successfully booked!');
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -158,21 +163,12 @@ function BookAppointment() {
 
         <br />
         <div>
-          <button className="btn" type="submit">
-            Book
-          </button>
-        </div>
+      <button className="btn" type="submit" onClick={handleBooking}>
+        Book
+      </button>
+    </div>
       </form>
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <p>Successfully booked!</p>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }
