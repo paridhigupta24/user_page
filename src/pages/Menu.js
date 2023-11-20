@@ -92,7 +92,7 @@ function Menu() {
                 <Link to="/" className="nav-item nav-link active">
                   Home
                 </Link>
-                <Link to="/about" className="nav-item nav-link">
+                <Link to="/about2" className="nav-item nav-link">
                   About
                 </Link>
                 <Link to="/enquiry" className="nav-item nav-link">

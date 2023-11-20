@@ -16,6 +16,8 @@ import Main from "./pages/main";
 import DoctorIndex from "./pages/Doctorindex";
 import MyPatient from "./pages/mypatient";
 import AppointmentDetails from './pages/AppointmentDetails';
+import About2 from "./pages/about2";
+import About3 from "./pages/about3";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/doctorprofile" element={<DoctorProfile />} />
+          <Route path="/about2" element={<About2 />} />
+          <Route path="/about3" element={<About3 />} />
           <Route path="/enquiry" element={<Enquiry />} />
           <Route path="/patienthistory" element={<PatientHistory />} />
           <Route path='/mypatient' element={<MyPatient />} />

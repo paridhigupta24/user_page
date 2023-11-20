@@ -15,7 +15,7 @@ function BookAppointment() {
     message: '',
   });
 
-  const [showModal, setShowModal] = useState(false);
+  
 
   const handleChange = (e) => {
     setFormData({
@@ -36,9 +36,7 @@ function BookAppointment() {
       const response = await axios.post('http://localhost:3002/feedback', formData);
       console.log('Response:', response.data);
 
-      // Show custom popup
-      setShowModal(true);
-
+     
       // Reset form data
       setFormData({
         name: '',
@@ -54,11 +52,6 @@ function BookAppointment() {
     }
   };
 
-  const closeModal = () => {
-    // Close the modal
-    console.log("Closing modal");
-    setShowModal(false);
-  };
   return (
     <div className='wrapper'>
       <Menu />
